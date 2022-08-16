@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from
 import Nav from "./components/Nav/Nav";
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
+import LoginPage from "./pages/LoginPage";
 import "./App.css";
 
 function App() {
@@ -12,8 +13,8 @@ function App() {
       <Nav />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route path="/project" element={<ProjectPage />} />
-        
+        <Route path="project/:id" element={<ProjectPage />} />
+        <Route path="login" element={<LoginPage />} />
       </Routes>
     </Router>
   );
