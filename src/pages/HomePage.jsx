@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { allProjects } from "../data";
+// import { allProjects } from "../data"; (Use this if you want to test dummy data)
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
 function HomePage() {
