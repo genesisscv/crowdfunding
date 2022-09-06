@@ -1,0 +1,10 @@
+.banner-image {
+    background-blend-mode: multiply;
+    /* background-color: rgba(0,0,0,.6); */
+    background-image: url(https://topoztours.com.au/wp-content/uploads/2022/05/118753-56-V4-1920x500.jpg);
+    display: flex;
+    height: 25rem;
+    margin:  30px auto;
+    padding-left: 13rem;
+    margin-top: 0%;
+}
