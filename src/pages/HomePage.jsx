@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
-<<<<<<< HEAD
-// import { allProjects } from "../data"; (Use this if you want to test dummy data)
-=======
 // import { allProjects } from "../data"; Use this if you want to test dummy data
->>>>>>> develop
+import React, { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import Banner from "../components/Banner/Banner"
+
+
 function HomePage() {
 
     const [projectList, setProjectList] = useState([]);
