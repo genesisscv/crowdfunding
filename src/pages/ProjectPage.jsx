@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import ProjectDetails from "../components/ProjectDetails/ProjectDetails";
 
 
 function ProjectPage() {
@@ -16,7 +17,7 @@ function ProjectPage() {
         });
     }, []);
     return (
-        <ProjectDetails />
+        <ProjectDetails projectData={projectData} />
     );
 }
 export default ProjectPage;
