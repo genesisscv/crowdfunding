@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 
 function ProjectPage() {
-
     const [projectData, setProjectData] = useState({pledges: [] });
     const { id } = useParams();
 
@@ -17,21 +16,7 @@ function ProjectPage() {
         });
     }, []);
     return (
-        <div>
-        <h2>{projectData.title}</h2>
-        <h3>Created at: {projectData.date_created}</h3>
-        <h3>{`Status: ${projectData.is_open}`}</h3>
-        <h3>Pledges:</h3>
-        <ul>
-        {projectData.pledges.map((pledgeData, key) => {
-            return(
-                <li>
-                {pledgeData.amount} from {pledgeData.supporter}
-                </li>
-            );
-        })}
-        </ul>
-        </div>
+        <ProjectDetails />
     );
 }
 export default ProjectPage;
