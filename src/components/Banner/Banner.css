@@ -36,15 +36,18 @@
   font-size: 1.5rem;
   justify-content: left;
   color: rgb(255, 255, 255);
-  padding: 8px 10px 8px 10px;
+  padding: 8px 20px 8px 20px;
   display: inline-block;
   border: 2px solid rgb(255, 255, 255);
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 216px;
+  border-radius: 15px;
 }
 .login-button:hover {
   color: white;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: #3e8e41;
+  border: none;
 }
 
 /* media queries start */
