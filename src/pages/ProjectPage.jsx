@@ -15,18 +15,23 @@ function ProjectPage() {
         setProjectData(data);
       });
   }, []);
-  
-  
+
   return (
-  <ProjectDetails projectData={projectData} />
-  <div>
-  <h3>Pledges:</h3>
-      
-        {projectData.pledges.map((pledgeData, key) => {
-          return (
-            
-              {pledgeData.amount} from {pledgeData.supporter}
-        
-            </div>)
+    <div>
+      <ProjectDetails projectData={projectData} />
+      <div>
+        <h3>Pledges:</h3>
+        <ul>
+          {projectData.pledges.map((pledgeData, key) => {
+            return (
+              <li>
+                ${pledgeData.amount} from {pledgeData.supporter}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
+  );
 }
 export default ProjectPage;
