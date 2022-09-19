@@ -1,74 +1,75 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./LoginForm.css";
 
 function LoginForm() {
-    const [credentials, setCredentials] = useState({
-        username: "",
-        password: "",
-    });
+  const [credentials, setCredentials] = useState({
+    username: "",
+    password: "",
+  });
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleChange = (e) => {
-        const { id, value } = e.target;
-        setCredentials((prevCredentials) => ({
-        ...prevCredentials,
-        [id]: value,
-        }));
-    };
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setCredentials((prevCredentials) => ({
+      ...prevCredentials,
+      [id]: value,
+    }));
+  };
 
-        
-    const postData = async () => {
-        const response = await fetch(
-        `${process.env.REACT_APP_API_URL}api-token-auth/`, 
-        {
+  const postData = async () => {
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}api-token-auth/`,
+      {
         method: "post",
-        headers: {"Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(credentials),
-        }
-        );
+      }
+    );
 
-        return response.json();
-    };
+    return response.json();
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (credentials.username && credentials.password) {
-        postData().then((response) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (credentials.username && credentials.password) {
+      postData().then((response) => {
         window.localStorage.setItem("token", response.token);
         navigate("/");
         console.log(response);
-        });
-        }
-    };
+      });
+    }
+  };
 
-    return (
-        <form>
-        <div>
-        <label htmlFor= "username">Username:</label>
+  return (
+    <form className="form-box">
+      <div>
+        <h2>Please log in</h2>
+      </div>
+      <div>
+        <label htmlFor="username">Username:</label>
         <input
-            type="text"
-            id="username"
-            placeholder="Enter username"
-            onChange={handleChange}
+          type="text"
+          id="username"
+          placeholder="Enter username"
+          onChange={handleChange}
         />
-        </div>
-        <div>
+      </div>
+      <div>
         <label htmlFor="password">Password:</label>
         <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            onChange={handleChange}
+          type="password"
+          id="password"
+          placeholder="Password"
+          onChange={handleChange}
         />
-        </div>
-        <button type="submit" onClick={handleSubmit}>
+      </div>
+      <button className="btn" type="submit" onClick={handleSubmit}>
         Login
-        </button>
-        </form>
-    );
-
+      </button>
+    </form>
+  );
 }
 
 export default LoginForm;
