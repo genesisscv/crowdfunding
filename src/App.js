@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
+import ContactPage from "./pages/ContactPage";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
 
@@ -17,6 +19,8 @@ function App() {
         <Route path="project/:id" element={<ProjectPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="signup" element={<SignUpPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </Router>

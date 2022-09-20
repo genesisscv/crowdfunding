@@ -2,7 +2,6 @@ body {
   font-family: "Open Sans", sans-serif;
   margin: 0 auto 0 auto;
   width: 100%;
-  text-align: left;
   margin: 20px 0px 20px 0px;
   height: 100%;
 }
@@ -21,11 +20,11 @@ label {
 
 .username {
   border: #ccc 1px solid;
-  padding: 20px;
-  width: 250px;
-  color: #2d2d2d;
+  width: 300px;
   margin-top: 10px;
+  margin-left: 10%;
   font-size: 1em;
+  display: block;
 }
 
 .user-title {
@@ -36,17 +35,31 @@ label {
 }
 
 .password {
-  color: #181515;
-  font-weight: medium;
-  align-items: left;
+  border: #ccc 1px solid;
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 10%;
+  font-size: 1em;
+  display: block;
 }
 
-.password {
-  background: #ecf0f1;
-  padding: 18px;
-  width: 251px;
+.email {
+  border: #ccc 1px solid;
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 10%;
   font-size: 1em;
-  color: #2d2d2d;
+  display: block;
+}
+
+.message {
+  border: #ccc 1px solid;
+  width: 300px;
+  height: 200px;
+  margin-top: 10px;
+  margin-left: 10%;
+  font-size: 1em;
+  display: block;
 }
 
 .btn {
@@ -79,4 +92,5 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 30px;
 }
